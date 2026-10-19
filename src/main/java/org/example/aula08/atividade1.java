@@ -1,4 +1,4 @@
-package org.example.aula07;
+package org.example.aula08;
 import java.util.Scanner;
 
 public class atividade1 {

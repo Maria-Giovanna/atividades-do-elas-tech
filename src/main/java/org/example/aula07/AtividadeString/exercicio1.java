@@ -1,4 +1,4 @@
-package org.example.aula06.AtividadeString;
+package org.example.aula07.AtividadeString;
 import java.util.Scanner;
 
 

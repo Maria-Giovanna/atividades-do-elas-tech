@@ -1,4 +1,4 @@
-package org.example.aula07.Testes;
+package org.example.aula08.Testes;
 
 public class AtividadeTeste {
     static void main() {

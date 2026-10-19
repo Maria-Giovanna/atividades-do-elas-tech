@@ -1,4 +1,4 @@
-package org.example.aula06.arrays;
+package org.example.aula07.arrays;
 
 public class AtividadeDeArrays {
     /*1 — Crie um array com os nomes de 5 pessoas. Mostre o primeiro, o terceiro e o último.
