@@ -13,7 +13,7 @@ public class atividadeScanner {
         int age= sc.nextInt();
 
         infoNaTela(nome,age);
-        System.out.println("==========================");
+        System.out.println("\n==========================");
 
         //atividade 2
         System.out.println("Digite um primeiro número:");
@@ -30,10 +30,28 @@ public class atividadeScanner {
         System.out.println(calculoDeResto(numero1,numero2));
 
         //atividade 3
+        System.out.println("\n==========================");
+        System.out.println("Digite a nota de uma aluna:");
+        double nota= sc.nextDouble();
+        sc.nextLine();
+
+        String aprovadoOuNao= foiOuNaoAprovada(nota);
+
+        System.out.printf("O status da aluna é o seguinte: %s", aprovadoOuNao);
+
 
         //atividade 4
+        System.out.println("\n==========================");
+        System.out.println("Deseja saber a tabuada de algum número?\nDigite o número abaixo:");
+
+        double numero= sc.nextDouble();
+        sc.nextLine();
+
+        tabuada(numero);
+
     }
 
+    //MÉTODOS
     static void infoNaTela(String name, int idade){
         System.out.printf("Oie %s!\nVocê tem %d anos e vai fazer "+ (idade+1)+ " anos no proximo aniversário", name,idade);
     }
@@ -56,6 +74,23 @@ public class atividadeScanner {
 
     static int calculoDeResto(int a, int b){
         return  a%b;
+    }
+
+    static String foiOuNaoAprovada(double a){
+        if (a>=7){
+            return "Aprovada";
+        } else if (a>=5) {
+            return "Recuperação";
+        }else{
+            return "Reprovado";
+        }
+    }
+
+    static void tabuada(double a){
+        for (int i=1; i<=10; i++){
+            double resultado= a*i;
+            System.out.printf("\n%.1f x %d = %.1f", a,i,resultado);
+        }
     }
 
 }
