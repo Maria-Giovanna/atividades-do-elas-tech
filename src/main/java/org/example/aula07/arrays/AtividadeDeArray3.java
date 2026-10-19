@@ -12,6 +12,8 @@ public class AtividadeDeArray3 {
     //printar os 5 numeros de traz pra frente:
     printaOsNumerosDeTrasPraFrente(numerosAleatorios);
 
+    scanner.close();
+
     }
 
     static double[] preencherOsNumeros(Scanner scanner, int contador){
