@@ -72,6 +72,4 @@ public class Metodos {
     static void naoImprimeNome(){
         System.out.println("Olá!");
     }
-
-
 }
