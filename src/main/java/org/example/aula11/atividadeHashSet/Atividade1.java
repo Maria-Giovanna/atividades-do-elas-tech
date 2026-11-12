@@ -1,8 +1,8 @@
 package org.example.aula11.atividadeHashSet;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
+
 import java.util.Scanner;
 
 public class Atividade1 {
@@ -10,18 +10,21 @@ public class Atividade1 {
    repetido. Imprima o conjunto e o tamanho. Repare no que aconteceu
    com o repetido.*/
 
-   ArrayList<String> nomeDosClientes = new ArrayList<>();
-   HashSet<String> combinacoesDosNomesDosClientes = new HashSet<>(nomeDosClientes);
+   static void main() {
+      Scanner scanner = new Scanner(System.in);
+      ArrayList<String> nomeDosClientes = new ArrayList<>();
+      HashSet<String> combinacoesDosNomesDosClientes = new HashSet<>(nomeDosClientes);
+
+      saudacao();
+      adicionarOsNomesNaLista(scanner, nomeDosClientes);
+      adicionarOsNomesParaVerificacao(combinacoesDosNomesDosClientes, nomeDosClientes);
+      quantidadeDosNomesNaoRepetidos(combinacoesDosNomesDosClientes);
+
+      //Qualquer que seja o nome repetido, ele só ignora e conta uma unica vez
+   }
 
 
-
-
-
-
-
-
-
-   static HashSet<String> verOsNomesDaLista(HashSet<String> combinacoes, ArrayList<String> nomes){
+   public static HashSet<String> adicionarOsNomesParaVerificacao(HashSet<String> combinacoes, ArrayList<String> nomes){
 
       for (String nome: nomes){
          combinacoes.add(nome);
@@ -29,14 +32,24 @@ public class Atividade1 {
       return combinacoes;
    }
 
-   static ArrayList<String> nomes(Scanner scanner, ArrayList<String> nomeDosClientes){
+   public static ArrayList<String> adicionarOsNomesNaLista(Scanner scanner, ArrayList<String> nomeDosClientes){
 
-      for (int i=0; i<3; i++){
-
-         System.out.println("Bom dia, boa tarde e boa noite!");
-
+      for (int i=0; i<4; i++){
+         System.out.println("Digite o "+ (i+1) +"º nome da lista:");
+         nomeDosClientes.add(scanner.nextLine().trim().toUpperCase());
       }
+      System.out.println("Muito obrigada por preencher os 3 nomes até aqui");
 
+      return nomeDosClientes;
+   }
 
+   public static void saudacao(){
+      System.out.println("Olá! Seja bem vindo ao sistema de verificação de clientes!\n");
+      System.out.println("Abaixo, digite 4 nomes e verifique quantos estiveram fazendo pedido no comércio :)");
+   }
+
+   public static void quantidadeDosNomesNaoRepetidos(HashSet<String> nomes){
+         System.out.println("clientes que fizeram pedidos: "+nomes);
+         System.out.println("Quantidade de clientes diferentes: "+ nomes.size());
    }
 }
